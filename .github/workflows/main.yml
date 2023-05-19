@@ -2,7 +2,7 @@ name: CI
 on:
   push:
     branches:
-      - "**"
+      - '**'
 
 jobs:
   build:
@@ -10,11 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
-        with:
-          version: 7
       - uses: actions/setup-node@v3
         with:
           cache: 'pnpm'
 
-      - run: pnpm install --frozen-lockfile
+      - run: pnpm i --ignore-scripts
       - run: pnpm run lint && pnpm run build

@@ -2,24 +2,29 @@
 	"name": "npm-setup",
 	"version": "0.1.0",
 	"description": "",
+	"keywords": [],
+	"repository": "baileys-li/supports-avif",
+	"license": "MIT",
+	"author": {
+		"name": "Arthur Baileys Li",
+		"url": "https://github.com/baileys-li"
+	},
 	"main": "dist/index.js",
 	"module": "dist/index.mjs",
 	"types": "dist/index.d.ts",
 	"scripts": {
 		"build": "tsup index.ts --format cjs,esm --dts",
-		"lint": "tsc"
-	},
-	"keywords": [],
-	"author": {
-		"name": "Arthur Baileys Li",
-		"url": "https://github.com/baileys-li"
-	},
-	"license": "MIT",
-	"volta": {
-		"node": "18.15.0"
+		"lint": "tsc",
+		"prettier": "prettier --write ."
 	},
 	"devDependencies": {
+		"@types/prettier": "^2.7.2",
+		"prettier": "2.8.7",
 		"tsup": "^6.7.0",
 		"typescript": "^5.0.2"
+	},
+	"packageManager": "pnpm@8.5.1",
+	"volta": {
+		"node": "18.15.0"
 	}
 }
